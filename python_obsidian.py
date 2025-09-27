@@ -206,11 +206,6 @@ def save_results_to_json(total_chars, total_lines, results, output_path):
 
 def get_obsidian_json(backup_dir,output_dir):
     vault = "C:\Software\database\ob\\0projects"
-    #backup_dir = "C:\Software\database\obsidian_bak_for_python\pro"
-    #output_dir = "C:\Software\database\ob\\0projects\\attachments\9_others\daily.json"
-    
-    # 获取昨日备份路径gg
-
     print(f"当前笔记库: {vault}，对比备份文件夹: {backup_dir}")
     
     if not os.path.exists(backup_dir):
