@@ -28,9 +28,6 @@ def clean_markdown_content(content):
     return content
 
 def calculate_text_diff(old_content, new_content):
-    """
-    计算两个文本之间的差异，返回新增字符数和删除字符数
-    """
     # 清理内容
     old_cleaned = clean_markdown_content(old_content).splitlines()
     new_cleaned = clean_markdown_content(new_content).splitlines()
