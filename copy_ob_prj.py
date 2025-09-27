@@ -15,10 +15,8 @@ def copy_md_files(src_dir, dst_dir):
             if file.endswith('.md'):
                 # 获取源文件的完整路径
                 src_file_path = os.path.join(root, file)
-                
                 # 计算相对于源目录的相对路径
                 relative_path = os.path.relpath(root, src_dir)
-                
                 # 构建目标目录路径，保持原有结构
                 if relative_path == '.':
                     dst_file_dir = dst_dir
@@ -27,7 +25,6 @@ def copy_md_files(src_dir, dst_dir):
                 
                 # 创建目标目录（如果不存在）
                 os.makedirs(dst_file_dir, exist_ok=True)
-                
                 # 构建目标文件的完整路径
                 dst_file_path = os.path.join(dst_file_dir, file)
                 
@@ -37,7 +34,6 @@ def copy_md_files(src_dir, dst_dir):
                     print(f"已复制: {src_file_path} -> {dst_file_path}")
                 except Exception as e:
                     print(f"复制文件失败 {src_file_path}: {e}")
-    
     print("操作完成！")
     return True
 
@@ -53,8 +49,6 @@ def main():
         # 创建文件夹（若父目录不存在会报错）
         os.mkdir(daily_bak_full_path)
         print(f"文件夹 {daily_bak_full_path} 已创建")
-    
-
     
     # 执行复制操作
     copy_md_files(source, daily_bak_full_path)
