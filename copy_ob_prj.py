@@ -1,4 +1,5 @@
-import os
+import os,datetime
+from datetime import date, timedelta
 import shutil
 import argparse
 
@@ -48,16 +49,22 @@ def copy_md_files(src_dir, dst_dir):
     return True
 
 def main():
-    # 设置命令行参数解析
 
-    
     source = 'C:\Software\database\ob\\0projects'
-    destination = 'C:\Software\database\obsidian_bak_for_python\pro'
+    destination = 'C:\Software\database\obsidian_bak_for_python\\'
+    today = datetime.datetime.now().strftime('%Y%m%d')
+    bak_folder_name = "obsidian_bak_" + today
+    daily_bak_full_path = destination+bak_folder_name
+    print(daily_bak_full_path)
+    if not os.path.exists(daily_bak_full_path):
+        # 创建文件夹（若父目录不存在会报错）
+        os.mkdir(daily_bak_full_path)
+        print(f"文件夹 {daily_bak_full_path} 已创建")
     
 
     
     # 执行复制操作
-    copy_md_files(source, destination)
+    copy_md_files(source, daily_bak_full_path)
 
 if __name__ == "__main__":
     main()
