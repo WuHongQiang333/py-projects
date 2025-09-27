@@ -42,6 +42,7 @@ def calculate_text_diff(old_content, new_content):
     differ = difflib.Differ()
     result = differ.compare(old_cleaned, new_cleaned)
     #print("result:",result)
+    # 让修改的内容在obsidian上面以代码形式呈现，不然会出现渲染
     diff_content = "```\n"
     for line in result:
         if line.startswith('- '):
