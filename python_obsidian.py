@@ -33,9 +33,7 @@ def calculate_text_diff(old_content, new_content):
     """
     # 清理内容
     old_cleaned = clean_markdown_content(old_content).splitlines()
-    
     new_cleaned = clean_markdown_content(new_content).splitlines()
-    
     
     # 使用difflib计算差异
     matcher = difflib.SequenceMatcher(None, old_cleaned, new_cleaned)
