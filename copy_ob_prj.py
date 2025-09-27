@@ -4,13 +4,6 @@ import shutil
 import argparse
 
 def copy_md_files(src_dir, dst_dir):
-    """
-    复制源目录中所有的 .md 文件到目标目录，保持目录结构不变
-    
-    Args:
-        src_dir (str): 源目录路径
-        dst_dir (str): 目标目录路径
-    """
     # 检查源目录是否存在
     if not os.path.exists(src_dir):
         print(f"错误：源目录 '{src_dir}' 不存在")
