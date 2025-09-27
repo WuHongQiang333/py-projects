@@ -125,10 +125,6 @@ def compare_folders(current_dir, backup_dir):
     print("一共将",len(md_files)-len(new_md_files),"个文件过滤") 
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 72ea437cbaa649af109dba3abcc5800634858a68
     work_file_basename_list = [elm.name for elm in md_files]
     back_file_basename_list = [elm.name for elm in back_md_files]
     #print("work dir md_files :", work_file_basename_list)
