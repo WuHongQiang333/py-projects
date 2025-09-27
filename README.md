@@ -1,1 +1,8 @@
+# 文件简介
+copy_ob_prj脚本用来复制一个目录里面的所有的md文件到另外一个备份文件夹，备份文件夹里的名称包含日期信息。
+python_obsidian脚本用来输出包含两个库之间的md文件差异的json文件，这个json文件后续会被obsidian的homepage插件读取。
+
+# 我自己的使用方法
+copy_ob_prj脚本，每日运行一次，生成库文件的备份。
+python_obsidian脚本每5分钟运行一次，不断刷新json文件，在obsidian就可以看到每日文本的差异了。
 
